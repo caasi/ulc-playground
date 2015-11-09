@@ -1,0 +1,20 @@
+{
+  "name": "ulc-playground",
+  "version": "0.0.1",
+  "description": "My λ-calculus Playground",
+  "scripts": {
+    "start": "webpack-dev-server --content-base ./src --progress --colors --hot --inline",
+    "build:clean": "rimraf ./dist",
+    "build": "npm run build:clean && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:caasi/ulc-playground.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caasi/ulc-playground/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
