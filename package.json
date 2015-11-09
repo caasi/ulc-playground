@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.0.16",
+    "lodash": "^3.6.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-redux": "^4.0.0",
