@@ -1,8 +1,0 @@
-.className > :global(.lambda) {
-  width: 640px;
-  height: 480px;
-}
-
-.className > input {
-  border: none;
-}
