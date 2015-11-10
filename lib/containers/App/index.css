@@ -1,8 +1,54 @@
-.className > :global(.lambda) {
-  width: 640px;
-  height: 480px;
+.className {
+  font-size: 1.5rem;
 }
 
-.className > input {
+.className > * {
+  background: #16161d;
+  color: #0c0;
+}
+
+.className > :global(.lambda) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 60%;
+  border-right: 2px solid #0c0;
+  border-bottom: 2px solid #0c0;
+}
+
+.className > :global(.panel) {
+  position: absolute;
+  left: 80%;
+  top: 0;
+  width: 20%;
+  height: 60%;
+  border-bottom: 2px solid #0c0;
+}
+
+.className > :global(.panel) > button {
   border: none;
+  background: transparent;
+  width: 100%;
+  border-bottom: 2px solid #0c0;
+}
+
+.className > :global(.panel) > :global(.evaluate) {
+}
+
+.className > :global(.input) {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  width: 50%;
+  height: 40%;
+  border-right: 2px solid #0c0;
+}
+
+.className > :global(.output) {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 50%;
+  height: 40%;
 }

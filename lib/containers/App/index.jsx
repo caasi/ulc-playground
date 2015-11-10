@@ -37,13 +37,18 @@ export default connect(
             actions.lambda.source(e.target.value);
           }}
         />
-        <button
-          onClick={e => {
-            actions.lambda.reduce();
-          }}
+        <div
+          className="panel"
         >
-          run
-        </button>
+          <button
+            className="evaluate"
+            onClick={e => {
+              actions.lambda.reduce();
+            }}
+          >
+            evaluate
+          </button>
+        </div>
         <AST
           className="input"
           tree={lambda.ast}

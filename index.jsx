@@ -6,6 +6,7 @@ import App from './lib/containers/App';
 import configureStore from './lib/store/configureStore';
 
 import 'normalize.css/normalize.css';
+import './index.css';
 
 const store = configureStore();
 
