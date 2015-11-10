@@ -1,2 +1,8 @@
 .className {
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.className :global(.term) > :global(.term) {
+  margin-left: 2rem;
 }
