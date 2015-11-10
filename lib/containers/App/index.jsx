@@ -6,6 +6,8 @@ import * as LambdaActions from '../../actions/lambda';
 import Source from '../../components/Source';
 import AST from '../../components/AST';
 
+import styles from './index.css';
+
 function mapStateToProps(state) {
   return {
     lambda: state.lambda
@@ -25,9 +27,9 @@ export default connect(
   mapDispatchToProps
 )(
   (props) => {
-    let { lambda, actions } = props;
+    let { className, children, lambda, actions } = props;
     return (
-      <div className="index">
+      <div className={`${styles.className} ${className}`}>
         <Source
           className="lambda"
           value={lambda.source}

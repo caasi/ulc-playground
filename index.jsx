@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import App from './lib/containers/App';
 import configureStore from './lib/store/configureStore';
 
-import parse from './lib/parse';
+import 'normalize.css/normalize.css';
 
 const store = configureStore();
 
