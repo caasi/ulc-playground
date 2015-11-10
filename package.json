@@ -4,7 +4,7 @@
   "description": "My λ-calculus Playground",
   "scripts": {
     "start": "webpack-dev-server --progress --colors --hot --inline",
-    "build:clean": "rimraf ./dist",
+    "build:clean": "rimraf ./bundle.js",
     "build": "npm run build:clean && webpack"
   },
   "repository": {
