@@ -24,6 +24,12 @@ const App = props => (
   </div>
 );
 
+const Int = props => (
+  <div className="term internal">
+    <div>["int", {props.body.toString()}]</div>
+  </div>
+);
+
 function construct(tree) {
   switch (tree[0]) {
     case 'var':
@@ -35,6 +41,8 @@ function construct(tree) {
         {construct(tree[1])}
         {construct(tree[2])}
       </App>
+    case 'int':
+      return <Int body={tree[2]} />
   }
 }
 
