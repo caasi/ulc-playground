@@ -3,10 +3,7 @@ var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080',
-    'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'index')
   ],
   output: {
@@ -16,8 +13,7 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.UglifyJsPlugin()
   ],
   resolve: {
     extensions: ['', '.js', '.jsx']
