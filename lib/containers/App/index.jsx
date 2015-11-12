@@ -55,7 +55,7 @@ export default connect(
         />
         <AST
           className="output"
-          tree={lambda.reduced[lambda.reduced.length-1]}
+          tree={lambda.reduced}
         />
       </div>
     );
