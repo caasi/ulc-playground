@@ -43,7 +43,7 @@ export default connect(
           <button
             className="evaluate"
             onClick={e => {
-              actions.lambda.reduce();
+              actions.lambda.reduce(lambda.ast);
             }}
           >
             evaluate
@@ -55,7 +55,7 @@ export default connect(
         />
         <AST
           className="output"
-          tree={lambda.reduced}
+          tree={lambda.reduced[lambda.reduced.length-1]}
         />
       </div>
     );
