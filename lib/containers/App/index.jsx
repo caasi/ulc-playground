@@ -5,6 +5,7 @@ import * as LambdaActions from '../../actions/lambda';
 
 import Source from '../../components/Source';
 import AST from '../../components/AST';
+import Terminal from '../../components/Terminal';
 
 import styles from './index.css';
 
@@ -33,18 +34,22 @@ export default connect(
         <Source
           className="lambda"
           value={lambda.source}
-          onChange={e => {
-            actions.lambda.source(e.target.value);
-          }}
+          onChange={e => actions.lambda.source(e.target.value)}
         />
+        <Terminal
+          className="terminal"
+          command={lambda.input}
+          onChange={e => actions.lambda.input(e.target.value)}
+          onSubmit={e => actions.lambda.execute()}
+        >
+          {lambda.history}
+        </Terminal>
         <div
           className="panel"
         >
           <button
             className="evaluate"
-            onClick={e => {
-              actions.lambda.reduce(lambda.ast);
-            }}
+            onClick={e => actions.lambda.reduce(lambda.ast)}
           >
             evaluate
           </button>

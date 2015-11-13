@@ -1,0 +1,29 @@
+.className {
+  position: relative;
+}
+
+.className > :global(.history) {
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+.className > :global(.history) > span {
+  display: block;
+}
+
+.className > input {
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+  border: 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.className > input:focus {
+  background: rgba(255, 255, 255, 0.1);
+}
+
