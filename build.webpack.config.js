@@ -30,7 +30,7 @@ module.exports = {
     }, {
       test: /\.css$/,
       loaders: ['style', 'css?modules', 'postcss'],
-      inculde: __dirname
+      include: __dirname
     }]
   },
   postcss: function() {
