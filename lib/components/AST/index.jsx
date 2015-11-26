@@ -26,7 +26,7 @@ const App = props => (
 
 const Int = props => (
   <div className="term internal">
-    <div>["int", {props.body.toString()}]</div>
+    <div>["int", {props.body && props.body.toString()}]</div>
   </div>
 );
 
