@@ -5,8 +5,8 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080',
-    'webpack/hot/only-dev-server',
+    'eventsource-polyfill',
+    'webpack-hot-middleware/client',
     path.resolve(__dirname, 'index')
   ],
   output: {
@@ -26,10 +26,6 @@ module.exports = {
     loaders: [{
       test: /\.jsx?$/,
       loader: 'babel',
-      query: {
-        cacheDirectory: true,
-        presets: ['es2015', 'react']
-      },
       exclude: /node_modules/
     }, {
       test: /\.css$/,
